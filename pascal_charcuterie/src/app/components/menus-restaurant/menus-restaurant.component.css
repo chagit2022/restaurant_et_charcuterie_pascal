@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body {
+    background-color: #050505;
+    font-family: Chillax, sans-serif;
+    color: #fff;
+    line-height: 160%;
+    font-weight: 400;
+    position: fixed;
+}
+/* parametres global */
+.pageGauche,
+.pageDroite {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+}
+.pageDroite {
+    overflow-y: scroll;
+}
+
+.navigations {
+    position: fixed;
+}
+.lienMenu,
+.titreArt,
+.PaGaText1 {
+    color: #face8d;
+}
+
+.PaGaText1 {
+    padding-top: 250px;
+}
+
+/* page de gauche */
+.pageGauche {
+    position: relative;
+}
+
+.fondGauche {
+    background: url("src/assets/img/BGLeft.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img {
+    border: 0;
+    vertical-align: middle;
+    display: inline-block;
+
+}
+
+.logoPG {
+    margin: 7%;
+    width: 170px;
+}
+.textGaCentral {
+    justify-content: center;
+    margin-top: -250px;
+}
+
+.PaGaText1 {
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: 100px;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    text-shadow: 0 0 10px rgb(81, 80, 80);
+}
+
+.PaGaText2 {
+    font-family: "Fredoka One", cursive;
+    font-size: 55px;
+    color: rgb(249, 242, 237);
+    text-decoration: dashed;
+    text-shadow: 0 0 15px rgb(81, 80, 80);
+}
+
+/* navbar gauche */
+.menuGauche {
+    background-color: #A42037;
+    display: flex;
+    align-items: center;
+    left: 18%;
+    width: 90%;
+    margin-top: 10px;
+}
+.ContNav{
+    width: 75%;
+    max-height: 76px;
+}
+.listGloMenuGau{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-left: 30%;
+    padding: 10px 0;
+}
+.listGloMenuGau li{
+    margin:0 5%;
+}
+.spanParams{
+    font-size:small;
+}
+.ContNav img, .btnColaps{
+    width: 30px;
+}
+.ContNav span, .btnColaps span{
+    margin-top: 5px ;
+}
+
+
+
+/* page de droite */
+.pageDroite {
+    background-color: #0f1119;
+}
+
+.menuDroit {
+    display: flex;
+    height: 70px;
+    background-color: #0f1119;
+    position: fixed;
+    padding: 10px 0 20px 0;
+    overflow-wrap: break-word;
+}
+
+.lienMenu {
+    margin: 6px;
+    font-family: "Fredoka One", cursive;
+    text-decoration: none;
+    color: #face8d !important;
+    text-align: center;
+}
+
+.ColapsParams{
+    background:#0f1119;
+    border: 0.4 px solid #face8d;
+    margin-top: 5px;
+}
+
+.menuArt {
+    margin: 0 40px;
+}
+.titreArt {
+    margin-top: 70px;
+    font-size: 45px;
+    font-family: "Dancing Script", cursive;
+}
+
+.carteArt {
+
+    scroll-behavior: smooth;
+    margin-top: 5%;
+}
+.artContentbox {
+    margin: 2%;
+    display: flex;
+}
+.textContent h5,
+.PriceBox h6 {
+    font-family: "Fredoka One", cursive;
+    color: antiquewhite;
+}
+.ExplikART {
+    color: rgb(81, 102, 140);
+    font-size: 14px;
+}
+.PriceBox {
+    margin: 2% 4%;
+}
+.btnAchat {
+    margin: 4%;
+    padding-inline: 5px;
+    width: 70px;
+}
+
+/* @Media queries */
+
+/* full */
+@media (max-width: 2000px) {
+    /* page gauche */
+    .menuGauche{
+        width: 60%;
+    }
+    /* page droite */
+    .carteArt {
+        display: flex;
+        flex-direction: row;
+        border: rgb(228, 194, 90) 0.5px solid;
+        border-radius: 14px;
+        height: 100px;
+    }
+    .divImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+    }
+
+    .imgArt {
+        width: 120px;
+        border-radius: 6px;
+    }
+    .textContent h5 {
+        font-size: 120%;
+    }
+
+    .priceBtnBox {
+        display: flex;
+        margin: 1% 5%;
+    }
+    .PriceBox h6 {
+        font-size: 110%;
+        margin-right: 3%;
+    }
+    .ExplikART {
+        font-size: 105%;
+    }
+}
+
+/* 1250px */
+@media (max-width: 1250px) {
+    /* page gauche */
+    .textGaCentral {
+        margin-right: 10%;
+    }
+    .menuGauche{
+        width: 85%;
+    }
+    /* page droite */
+    .lienMenu {
+        font-size: 90%;
+        margin-left: 3px;
+    }
+    .ExplikART {
+        font-size: 85%;
+    }
+}
+@media (max-width: 1100px) {
+    /* page droite */
+    .ExplikART {
+        font-size: 65%;
+    }
+    .textContent h5 {
+        font-size: 100%;
+    }
+
+    .listGloMenuGau img{
+        transform: scale(1);
+    }
+    .ColapsParams{
+
+    }
+
+}
+
+/* 900px */
+@media (max-width: 900px) {
+    .pageGauche,
+    .pageDroite {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        padding: 0 4%;
+        overflow: scroll;
+    }
+     /* page gauche */
+    .fondGauche {
+        height: 100%;
+    }
+
+    .logoPG{
+        margin-top: 25%;
+        width: 150px;
+    }
+
+    .textGaCentral {
+        margin-bottom: 50%;
+    }
+    .menuGauche{
+        max-width: 70%;
+        position: fixed;
+        top: 0;
+    }
+    .listGloMenuGau{
+        padding: 10px 20px;
+    }
+    .listGloMenuGau li{
+        margin:0 8%;
+    }
+
+    .listGloMenuGau img{
+        transform: scale(0.9);
+    }
+    .listGloMenuGau span{
+        font-size: 10px !important;
+    }
+
+    /* page droite */
+    .containerArticles {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lienMenu {
+        font-size: 70% !important;
+        position: absolute;
+        overflow: auto;
+    }
+    .titreArt {
+        margin-top: 100px;
+    }
+
+    .carteArt {
+        display: block;
+        width: 220px;
+        height: 300px;
+        padding: 4px;
+        margin: 10px;
+        overflow-y: visible;
+    }
+    .imgArt {
+        width: 200px;
+        margin: 2%;
+    }
+    .artContentbox {
+        margin: 3%;
+    }
+    .ExplikART {
+        font-size: 70%;
+    }
+    .textContent,
+    .priceBtnBox {
+        display: block;
+        margin: 3%;
+    }
+    .textContent h5 {
+        font-size: 120%;
+    }
+    .PriceBox h6 {
+        font-size: 100%;
+    }
+
+}
+/* 800px */
+
+@media (max-width: 800px) {
+    .containerArticles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* moins de 450px */
+@media (max-width: 450px) {
+    .containerArticles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
