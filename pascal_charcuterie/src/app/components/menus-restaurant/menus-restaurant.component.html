@@ -13,28 +13,30 @@
             <!-- Texte central -->
             <div class="grid textGaCentral justify-content-center">
                 <div class="g-start-2 text-center PaGaText1 mb-3">
-                    Alista ...
+                    <h2 class="animate__animated animate__jello">Alista ...</h2>
                 </div>
                 <div class="g-start-2 text-center PaGaText2">TU PEDIDO</div>
                 <div class="g-start-2 text-center text-white bottom-2"></div>
                 <!-- navbar page  ouvrant sur 2 pages 1/2 menu restaurant 2/2 produits domicile de Fabrique-->
-                <nav class="col-xl-7 col-lg-8 col-md-8 col-sd-11 navbar navbar-expand-lg navbar-light menuGauche rounded-5 ">
+                <nav
+                    class="col-xl-7 col-lg-8 col-md-8 col-sd-11 navbar navbar-expand-lg navbar-light menuGauche rounded-5"
+                >
                     <div class="container">
                         <div class="ContNav">
                             <ul class="listGloMenuGau">
-                                <li class="d-grid center">
+                                <li class="d-flex flex-column justify-content-center align-items-center">
                                     <a href="#" class="">
                                         <img
-                                            src="assets/img/carte-de-credit (1).png"
+                                            src="assets/img/chariot.png"
                                             alt="caddie"
                                         />
                                     </a>
                                     <span class="spanParams">Compra</span>
                                 </li>
-                                <li class="">
+                                <li class="d-flex flex-column justify-content-center align-items-center">
                                     <a href="#" class="">
                                         <img
-                                            src="assets/img/lhorloge (1).png"
+                                            src="assets/img/lhorloge (4).png"
                                             alt="caddie"
                                             data-mdb-toggle="popover"
                                             title="Popover title"
@@ -44,10 +46,10 @@
                                     </a>
                                     <span class="spanParams">Horarios</span>
                                 </li>
-                                <li class="">
+                                <li class="d-flex flex-column justify-content-center align-items-center">
                                     <a href="#" class="">
                                         <img
-                                            src="assets/img/contact.png"
+                                            src="assets/img/livre-de-contact.png"
                                             alt="caddie"
                                             data-mdb-toggle="popover"
                                             title="Popover title"
@@ -57,7 +59,7 @@
                                     </a>
                                     <span class="spanParams">Contactos</span>
                                 </li>
-                                <li class="">
+                                <li class="d-flex flex-column justify-content-center align-items-center">
                                     <a href="#" class="">
                                         <img
                                             src="assets/img/whatsapp.png"
@@ -66,23 +68,6 @@
                                     </a>
                                     <span class="spanParams">whatsApp</span>
                                 </li>
-
-                                <li>
-                                    <button
-                                    class="navbar-toggler text-bg-warning btnColaps"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarNavAltMarkup"
-                                    aria-controls="navbarNavAltMarkup"
-                                    aria-expanded="false"
-                                    aria-label="Toggle navigation"
-                                    aria-haspopup="true"
-                                >
-                                <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <span>Menus</span>
-                                </li>
-
                             </ul>
                         </div>
                     </div>
@@ -90,71 +75,24 @@
             </div>
         </article>
         <!-- page de droite -->
-        <article class="col-6 pageDroite d-flex animate__animated animate__slideInRight">
-            <!-- navbarposition top
+        <article class="col-6 pageDroite">
+            <!-- navbarposition top menuDroit animate__backInLeft <li>
+                            <a
+                                class="nav-link lienMenu active"
+                                aria-current="page"
+                                href="#entradas"
+                                >Entradas</a
+                            >
+                        </li>
              -->
-            <nav class="navbar navbar-expand-lg navbar-light menuDroit">
+             <nav class="navbar fixed-top bg-light">
                 <div class="container-fluid">
-                    <div
-                        class="collapse navbar-collapse ColapsParams"
-                        id="navbarNavAltMarkup"
-                    >
-                        <div class="navbar-nav">
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#entradas"
-                                    >Entradas</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#sandwitches"
-                                    >Sandwitches</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#enPlato"
-                                    >En plato</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#tablas"
-                                    >Tabla de charcuteria</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#pizzas"
-                                    >Pizzas</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link lienMenu active"
-                                    aria-current="page"
-                                    href="#bebidas"
-                                    >Bebidas</a
-                                >
-                            </li>
-                        </div>
-                    </div>
+                  <a class="navbar-brand" href="#">Fixed top</a>
                 </div>
-            </nav>
+              </nav>
             <!-- entradas, sandwitches, en plato, tablas de charcuteria, pizzas, Bebidas -->
             <!-- carte Menu/article complet -->
-            <section class="menuArt">
+            <section class="menuArt animate__animated animate__slideInRight ">
                 <!-- Section Menu ind -->
 
                 <article class="sectionMenuInd">
@@ -185,24 +123,10 @@
                                 </div>
                                 <!-- price art -->
 
-                                <div class="priceBtnBox">
+                                <div class="priceBtnBox bottom-0">
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -234,19 +158,35 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carteArt bg-transparent">
+                            <!-- img art -->
+                            <div class="divImg">
+                                <img
+                                    src="assets/img/Boudin_blanc.webp"
+                                    class="imgArt"
+                                    alt=""
+                                />
+                            </div>
 
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
+                            <!-- content art -->
+                            <div class="artContentbox">
+                                <!-- explicatif art -->
+                                <div class="textContent">
+                                    <h5>Boudin blanc</h5>
+                                    <p class="ExplikART">
+                                        salsicha con carne de cerdo y pollo con
+                                        leche
+                                    </p>
+                                </div>
+                                <!-- price art -->
+
+                                <div class="priceBtnBox">
+                                    <div class="PriceBox">
+                                        <h6>$7.000</h6>
+                                        <p class="ExplikART">Sencilla</p>
                                     </div>
                                 </div>
                             </div>
@@ -278,20 +218,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -321,64 +247,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carteArt bg-transparent">
-                            <!-- img art -->
-                            <div class="divImg">
-                                <img
-                                    src="assets/img/Boudin_blanc.webp"
-                                    class="imgArt"
-                                    alt=""
-                                />
-                            </div>
-
-                            <!-- content art -->
-                            <div class="artContentbox">
-                                <!-- explicatif art -->
-                                <div class="textContent">
-                                    <h5>Boudin blanc</h5>
-                                    <p class="ExplikART">
-                                        salsicha con carne de cerdo y pollo con
-                                        leche
-                                    </p>
-                                </div>
-                                <!-- price art -->
-
-                                <div class="priceBtnBox">
-                                    <div class="PriceBox">
-                                        <h6>$7.000</h6>
-                                        <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -418,19 +286,35 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carteArt bg-transparent">
+                            <!-- img art -->
+                            <div class="divImg">
+                                <img
+                                    src="assets/img/Boudin_blanc.webp"
+                                    class="imgArt"
+                                    alt=""
+                                />
+                            </div>
 
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
+                            <!-- content art -->
+                            <div class="artContentbox">
+                                <!-- explicatif art -->
+                                <div class="textContent">
+                                    <h5>Boudin blanc</h5>
+                                    <p class="ExplikART">
+                                        salsicha con carne de cerdo y pollo con
+                                        leche
+                                    </p>
+                                </div>
+                                <!-- price art -->
+
+                                <div class="priceBtnBox">
+                                    <div class="PriceBox">
+                                        <h6>$7.000</h6>
+                                        <p class="ExplikART">Sencilla</p>
                                     </div>
                                 </div>
                             </div>
@@ -462,20 +346,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -506,20 +376,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -549,64 +405,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carteArt bg-transparent">
-                            <!-- img art -->
-                            <div class="divImg">
-                                <img
-                                    src="assets/img/Boudin_blanc.webp"
-                                    class="imgArt"
-                                    alt=""
-                                />
-                            </div>
-
-                            <!-- content art -->
-                            <div class="artContentbox">
-                                <!-- explicatif art -->
-                                <div class="textContent">
-                                    <h5>Boudin blanc</h5>
-                                    <p class="ExplikART">
-                                        salsicha con carne de cerdo y pollo con
-                                        leche
-                                    </p>
-                                </div>
-                                <!-- price art -->
-
-                                <div class="priceBtnBox">
-                                    <div class="PriceBox">
-                                        <h6>$7.000</h6>
-                                        <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -646,20 +444,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -690,20 +474,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -733,20 +503,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -788,20 +544,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -832,20 +574,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -875,20 +603,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -928,20 +642,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -972,20 +672,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1015,20 +701,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -1068,20 +740,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1112,20 +770,6 @@
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
                                     </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1155,20 +799,6 @@
                                     <div class="PriceBox">
                                         <h6>$7.000</h6>
                                         <p class="ExplikART">Sencilla</p>
-                                    </div>
-
-                                    <!-- bouton achat -->
-                                    <div class="btnAchat">
-                                        <button class="btn btn-outline-warning">
-                                            <img
-                                                src="/assets/img/shopping-cart.png"
-                                                style="
-                                                    width: 35px;
-                                                    margin: 5px 10px;
-                                                "
-                                                alt=""
-                                            />
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -1179,4 +809,3 @@
         </article>
     </div>
 </section>
-
