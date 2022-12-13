@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 .body {
     background-color: #050505;
     font-family: Chillax, sans-serif;
-    color: #FDF5F5;
+    color: #fdf5f5;
     line-height: 160%;
     font-weight: 400;
     position: fixed;
@@ -26,7 +26,6 @@
 }
 
 .navigations {
-    position: fixed;
 }
 .lienMenu,
 .PaGaText1 {
@@ -53,7 +52,6 @@
     border: 0;
     vertical-align: middle;
     display: inline-block;
-
 }
 
 .logoPG {
@@ -76,12 +74,9 @@
     text-shadow: 0 0 10px rgb(81, 80, 80);
 }
 
-.PaGaText1 h2{
+.PaGaText1 h2 {
     font-size: 6em;
 }
-
-
-
 
 .PaGaText2 {
     font-family: "Fredoka One", cursive;
@@ -93,7 +88,7 @@
 
 /* navbar gauche */
 .menuGauche {
-    background-color: #A42037;
+    background-color: #a42037;
     display: flex;
     align-items: center;
     width: 90%;
@@ -101,58 +96,48 @@
     border: 1px solid #fcd1d1;
     margin-left: 20%;
 }
-.ContNav{
+.ContNav {
     width: 76%;
     max-height: 76px;
 }
-.listGloMenuGau{
+.listGloMenuGau {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     list-style-type: none;
     margin-left: 30%;
     padding: 10px 0;
 }
-.listGloMenuGau li{
-    margin:0 5%;
+.listGloMenuGau li {
+    margin: 0 5%;
 }
-.spanParams{
-    font-size:small;
-    font-weight: 6  00;
-    color:#fcd1d1;
-
+.spanParams {
+    font-size: small;
+    font-weight: 6 00;
+    color: #fcd1d1;
 }
-.ContNav img, .btnColaps{
+.ContNav img,
+.btnColaps {
     width: 30px;
 }
-.ContNav span, .btnColaps span{
-    margin-top: 5px ;
+.ContNav span,
+.btnColaps span {
+    margin-top: 5px;
 }
-
-
 
 /* page de droite */
 .pageDroite {
     background-color: #0f1119;
 }
 
-.menuDroit {
-    display: flex;
-    height: 70px;
-    background-color: #0f1119;
-    position: fixed;
-    padding: 10px 0 20px 0;
-    overflow-wrap: break-word;
-    animation-duration: 3s;
-    z-index: 1;
-}
-
 .lienMenu {
-    margin: 6px;
+    margin: 7px;
     font-family: "Fredoka One", cursive;
+    font-size: 18px;
     text-decoration: none;
     color: #face8d !important;
     text-align: center;
+    text-align: justify;
 }
 .menuArt {
     margin-left: 50px;
@@ -163,7 +148,7 @@
     margin-top: 70px;
     font-size: 45px;
     font-family: "Dancing Script", cursive;
-    color:#fcd1d1;
+    color: #fcd1d1;
 }
 
 .carteArt {
@@ -177,22 +162,20 @@
 .textContent h5,
 .PriceBox h6 {
     font-family: "Fredoka One", cursive;
-    color:#fee9e9;
+    color: #fee9e9;
 }
 .ExplikART {
     color: rgb(81, 102, 140);
     font-size: 14px;
 }
-.PriceBox {
-    margin: 2% 4%;
-}
+
 
 /* @Media queries */
 
 /* full */
 @media (max-width: 2000px) {
     /* page gauche */
-    .menuGauche{
+    .menuGauche {
         width: 60%;
     }
     /* page droite */
@@ -210,22 +193,37 @@
         margin-left: 2%;
     }
 
+    a, h6 {
+        --fz-min: 14;
+        --fz-max: 20;
+        line-height: 1.2;
+    }
+    .lienMenu, .PriceBox h6, .textContent h5 {
+        --fz-min-px: calc(var(--fz-min) * 1px);
+        --fz-max-px: calc(var(--fz-max) * 1px);
+        --fz-diff: calc(var(--fz-max) - var(--fz-min));
+        font-size: clamp(
+            var(--fz-min-px),
+            calc(
+                var(--fz-min-px) + var(--fz-diff) *
+                    ((100vw - 320px) / (2000 - 320))
+            ),
+            var(--fz-max-px)
+        );
+        margin-left: 3px;
+    }
+
     .imgArt {
         width: 120px;
         border-radius: 6px;
     }
-    .textContent h5 {
-        font-size: 120%;
-    }
+
 
     .priceBtnBox {
         display: flex;
         margin: 1% 5%;
     }
-    .PriceBox h6 {
-        font-size: 110%;
-        margin-right: 3%;
-    }
+
     .ExplikART {
         font-size: 105%;
     }
@@ -237,31 +235,19 @@
     .textGaCentral {
         margin-right: 10%;
     }
-    .menuGauche{
+    .menuGauche {
         width: 65%;
         margin-left: 25%;
     }
     /* page droite */
-    .lienMenu {
-        font-size: 90%;
-        margin-left: 3px;
-    }
-    .ExplikART {
-        font-size: 85%;
-    }
 }
 
 @media (max-width: 1100px) {
     /* page droite */
-    .ExplikART {
-        font-size: 65%;
-    }
-    .textContent h5 {
-        font-size: 100%;
-    }
-    .listGloMenuGau img{
+    .listGloMenuGau img {
         transform: scale(1);
     }
+
 }
 
 /* 900px */
@@ -273,12 +259,12 @@
         height: 100vh;
         overflow: scroll;
     }
-     /* page gauche */
+    /* page gauche */
     .fondGauche {
         height: 100%;
     }
 
-    .logoPG{
+    .logoPG {
         margin-top: 25%;
         width: 150px;
     }
@@ -286,43 +272,45 @@
     .textGaCentral {
         margin-bottom: 50%;
     }
-    .menuGauche{
-        max-width: calc(47%);
+    .menuGauche {
+        max-width: calc(50%);
         position: fixed;
-        top: 30px;
+        bottom: 30px;
         z-index: 1;
         margin-left: 26%;
     }
-    .listGloMenuGau{
+    .listGloMenuGau {
         justify-content: center;
         padding: 10px 13px;
     }
-    .listGloMenuGau li{
-        margin:0 7%;
+    .listGloMenuGau li {
+        margin: 0 7%;
     }
 
-    .listGloMenuGau img{
+    .listGloMenuGau img {
         transform: scale(0.9);
     }
-    .listGloMenuGau span{
+    .listGloMenuGau span {
         font-size: 10px !important;
     }
 
     /* page droite */
-    .pageDroite{
+    .pageDroite {
         position: fixed;
     }
     .containerArticles {
         display: grid;
         gap: 5%;
         grid-template-columns: repeat(3, 1fr);
+    }
 
+    .menuDroit{
+        position: fixed;
+        z-index: 1;
+        background-color: #0f1119;
+        padding: 10px 10px
     }
-    .lienMenu {
-        font-size: 70% !important;
-        position: absolute;
-        overflow: auto;
-    }
+    /* section type menus */
     .titreArt {
         margin-top: 100px;
     }
@@ -333,21 +321,18 @@
         height: 250px;
         padding: 10px;
         overflow-y: visible;
-        margin : 3px;
+        margin: 3px;
     }
     .imgArt {
         width: calc(100%);
         margin: 0;
         border-radius: 14px 14px 0 0;
-
-
     }
     .artContentbox {
         width: calc(100%);
         background-color: #0f1119;
         margin: 0;
         border-radius: 0 0 14px 14px;
-
     }
     .ExplikART {
         font-size: 70%;
@@ -377,22 +362,18 @@
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
     }
+    a{
+        --fz-min: 9;
+    }
+
+
 }
 
 /* moins de 300px */
 @media (max-width: 400px) {
-    .listGloMenuGau{
-
+    .listGloMenuGau {
     }
 
-    .ContNav{
-
+    .ContNav {
     }
-
-
-
-
-
-
 }
-
