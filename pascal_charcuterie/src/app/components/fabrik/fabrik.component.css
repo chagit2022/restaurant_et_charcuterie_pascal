@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:   #a42037;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+body, h1, .containerLogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 254px;
+    height:180px;
+    border: 10px solid #eee;
+    border-radius: 20px;
+    background: #f9ebeb;
+    box-shadow: inset 7px -7px 13px #b8aeae,
+                inset -7px 7px 13px #ffffff;
+    text-align: center;
+    transition: 0.8s;
+}
+
+.card:hover {
+    height: 400px;
+}
+
+
+.imgContentCard img{
+    width: 210px;
+    height:140px;
+    border-radius: 18px;
+    object-fit: cover;
+    margin: 5%;
+}
+
+.imgContentCard{
+    background: transparent;
+    border-radius: 16px;
+}
+
+.cardContent{
+    background:  #eee!important;
+    padding: 8px;
+    margin: 5px 20px;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #e0d4d4, #fffbfb);
+    box-shadow:  7px -7px 13px #b8aeae,
+                -7px 7px 13px #ffffff;
+    transform: translateY(-80px) scale(0);
+}
+
+.cardContent h5, p{
+    background: transparent;
+}
+
+.cardContent:hover{
+    transform: translateY(0) scale(1);
+}
+
+.card:hover .cardContent {
+    text-shadow: 2px 2px 0 #fff;
+}

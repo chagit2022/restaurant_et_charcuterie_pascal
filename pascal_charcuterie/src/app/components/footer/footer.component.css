@@ -1,0 +1,23 @@
+*{
+    background: #000;
+    height: 250px;
+
+}
+
+.footerContainer {
+    display: flex;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+
+  }
+
+.mapPascal {
+    margin: 3%;
+    border: #fbbda0 2px solid ;
+    border-radius: 14px;
+    width: 400px;
+    height: 185px;
+
+}

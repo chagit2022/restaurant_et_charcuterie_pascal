@@ -24,13 +24,11 @@
 .pageDroite {
     overflow-y: scroll;
 }
-
-.navigations {
-}
 .lienMenu,
 .PaGaText1 {
     color: #face8d;
 }
+
 
 .PaGaText1 {
     padding-top: 250px;
@@ -59,12 +57,16 @@
     width: 170px;
 }
 .textGaCentral {
+    display: flex;
+    flex-direction:column ;
     justify-content: center;
+    align-items: center;
     margin-top: -250px;
+    margin-left: 20%;
+
 }
 
 .PaGaText1 {
-    margin: 0;
     font-family: "Dancing Script", cursive;
     transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
@@ -91,10 +93,10 @@
     background-color: #a42037;
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 380px;
     margin-top: 10px;
     border: 1px solid #fcd1d1;
-    margin-left: 20%;
+
 }
 .ContNav {
     width: 76%;
@@ -108,20 +110,24 @@
     margin-left: 30%;
     padding: 10px 0;
 }
+
 .listGloMenuGau li {
-    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 7%;
 }
 .spanParams {
     font-size: small;
-    font-weight: 6 00;
+    font-weight: 600;
     color: #fcd1d1;
+    white-space: nowrap;
 }
+
 .ContNav img,
 .btnColaps {
     width: 30px;
 }
-.ContNav span,
-.btnColaps span {
+.ContNav span {
     margin-top: 5px;
 }
 
@@ -130,10 +136,23 @@
     background-color: #0f1119;
 }
 
+.menuDroit {
+    position: fixed;
+    z-index: 1;
+    background-color: #0f1119;
+}
+.conteneurMeDr{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-around;
+    margin-left:3%;
+}
+
 .lienMenu {
     margin: 7px;
     font-family: "Fredoka One", cursive;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     color: #face8d !important;
     text-align: center;
@@ -145,28 +164,28 @@
     animation-duration: 3s;
 }
 .titreArt {
-    margin-top: 70px;
-    font-size: 45px;
+    padding-top: 70px;
+    font-size: 30px;
     font-family: "Dancing Script", cursive;
     color: #fcd1d1;
 }
 
 .carteArt {
-    scroll-behavior: smooth;
     margin-top: 5%;
 }
 .artContentbox {
     margin: 2%;
     display: flex;
 }
-.textContent h5,
-.PriceBox h6 {
+.textContent h5, .priceBtnBox h6{
     font-family: "Fredoka One", cursive;
     color: #fee9e9;
+    margin-top: 5px;
+
 }
 .ExplikART {
     color: rgb(81, 102, 140);
-    font-size: 14px;
+    margin-right: 25px;
 }
 
 
@@ -175,9 +194,8 @@
 /* full */
 @media (max-width: 2000px) {
     /* page gauche */
-    .menuGauche {
-        width: 60%;
-    }
+
+
     /* page droite */
     .carteArt {
         display: flex;
@@ -193,14 +211,19 @@
         margin-left: 2%;
     }
 
-    a, h6 {
+    a,h5, h6 {
         --fz-min: 14;
         --fz-max: 20;
         line-height: 1.2;
     }
-    .lienMenu, .PriceBox h6, .textContent h5 {
+    p{
+        --fz-min: 8;
+        --fz-max: 14;
+        line-height: 1.2;
+    }
+    .lienMenu, .textContent h5, .ExplikART p {
         --fz-min-px: calc(var(--fz-min) * 1px);
-        --fz-max-px: calc(var(--fz-max) * 1px);
+        --fz-max-px: calc(var(--fz-max) * 0.5px);
         --fz-diff: calc(var(--fz-max) - var(--fz-min));
         font-size: clamp(
             var(--fz-min-px),
@@ -213,15 +236,13 @@
         margin-left: 3px;
     }
 
+
+
+
+
     .imgArt {
         width: 120px;
         border-radius: 6px;
-    }
-
-
-    .priceBtnBox {
-        display: flex;
-        margin: 1% 5%;
     }
 
     .ExplikART {
@@ -235,11 +256,6 @@
     .textGaCentral {
         margin-right: 10%;
     }
-    .menuGauche {
-        width: 65%;
-        margin-left: 25%;
-    }
-    /* page droite */
 }
 
 @media (max-width: 1100px) {
@@ -277,7 +293,8 @@
         position: fixed;
         bottom: 30px;
         z-index: 1;
-        margin-left: 26%;
+        margin: 0 25%;
+
     }
     .listGloMenuGau {
         justify-content: center;
@@ -304,12 +321,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .menuDroit{
-        position: fixed;
-        z-index: 1;
-        background-color: #0f1119;
-        padding: 10px 10px
-    }
+
     /* section type menus */
     .titreArt {
         margin-top: 100px;
@@ -331,23 +343,19 @@
     .artContentbox {
         width: calc(100%);
         background-color: #0f1119;
-        margin: 0;
+        margin: 10px 0 0 0 ;
         border-radius: 0 0 14px 14px;
     }
     .ExplikART {
-        font-size: 70%;
-    }
-    .textContent,
-    .priceBtnBox {
-        display: block;
-        margin: 3%;
+        font-size: 75%;
     }
     .textContent h5 {
         font-size: 120%;
     }
-    .PriceBox h6 {
-        font-size: 100%;
+    a{
+        --fz-max: 30;
     }
+
 }
 /* 800px */
 
@@ -355,25 +363,37 @@
     .containerArticles {
         grid-template-columns: repeat(2, 1fr);
     }
+    .menuGauche{
+
+    }
 }
 /* moins de 450px */
 @media (max-width: 450px) {
+    /* page gauche */
+    .listGloMenuGau{
+        width: 80%;
+    }
+    .listGloMenuGau img{
+        width: 25px;
+        justify-content: center;
+    }
+
+    a{
+        --fz-min: 9;
+    }
+    .spanParams {
+      display: none;
+    }
+    /* page droite */
     .containerArticles {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
     }
-    a{
-        --fz-min: 9;
+    .titreArt{
+        font-size:x-large;
+        padding: 8rem 0;
     }
 
 
 }
 
-/* moins de 300px */
-@media (max-width: 400px) {
-    .listGloMenuGau {
-    }
-
-    .ContNav {
-    }
-}
