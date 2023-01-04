@@ -16,13 +16,13 @@ body, h1, .containerLogos {
 .card{
     width: 254px;
     height:180px;
-    border: 10px solid #eee;
+    border: 8px solid #eee;
     border-radius: 20px;
-    background: #f9ebeb;
+    background: #fbe8e8;
     box-shadow: inset 7px -7px 13px #b8aeae,
                 inset -7px 7px 13px #ffffff;
     text-align: center;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .card:hover {
@@ -44,24 +44,163 @@ body, h1, .containerLogos {
 }
 
 .cardContent{
+
     background:  #eee!important;
     padding: 8px;
-    margin: 5px 20px;
+    margin: 5px 10px;
     border-radius: 14px;
     background: linear-gradient(45deg, #e0d4d4, #fffbfb);
     box-shadow:  7px -7px 13px #b8aeae,
                 -7px 7px 13px #ffffff;
-    transform: translateY(-80px) scale(0);
+    opacity: 0;
+    visibility: hidden;
+
 }
 
 .cardContent h5, p{
     background: transparent;
 }
-
-.cardContent:hover{
-    transform: translateY(0) scale(1);
+.card a{
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #720e1f;
+    color: orange;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .card:hover .cardContent {
-    text-shadow: 2px 2px 0 #fff;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+
 }
+
+
+
+/* 2eme card style */
+.card2{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.card2 .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+
+}
+
+.card2 .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #720e1f;
+    clip-path: circle(120px at center);
+    transition: 1s;
+
+}
+
+.card2:hover .circle::before{
+    background: #720e1f;
+    clip-path: circle(400px at center);
+
+}
+
+.card2 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    border-radius: 18px;
+    clip-path:circle(115px at center);
+    pointer-events: none;
+    transition: 1s;
+
+}
+
+.card2:hover img{
+    left: 75%;
+    height: 300px;
+}
+
+.card2 .contenu{
+    position: relative;
+    left: 20%;
+    width: 50%;
+    padding: 20px 20px 20px 40px;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card2:hover .contenu{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card2 .contenu h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+}
+.card2 p{
+    color: #fff;
+    font-size: 12px;
+}
+
+.card2 a{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .card2{
+        width: auto;
+        max-width: 300px;
+        align-items: flex-start;
+    }
+    .card2:hover{
+        height:500px;
+
+    }
+    .card2 .contenu{
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+
+    .card2:hover img{
+        top: 70%;
+        left: 50%;
+
+
+    }
+
+}
+
